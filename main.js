@@ -123,7 +123,7 @@ function subscribe() {
         pushButton.textContent = 'Disable Push Messages';
         pushButton.disabled = false;
 
-        console.log("Subscription details: " + subscription.toJSON());
+        console.log("Subscription details: " + JSON.stringify(subscription));
         
         // TODO: Send the subscription subscription.endpoint
         // to your server and save it to send a push message
@@ -188,7 +188,7 @@ function initialiseState() {
           return;
         }
 
-        console.log("Subscription details: " + subscription.toJSON());
+        console.log("Subscription details: " + JSON.stringify(subscription));
         // Keep your server in sync with the latest subscription
         sendSubscriptionToServer(subscription);
 
